@@ -8,12 +8,12 @@ RUN npm install -g gitbook-cli  && \
 	apt-get clean autoclean && npm cache clear && \
 	rm -rf /tmp/* /var/lib/{apt,dpkg,cache,log}/*
 
-RUN  mkdir /gitbook
-WORKDIR /gitbook
-#WORKDIR /srv/gitbook
-#VOLUME /srv/gitbook /srv/html
+# RUN  mkdir /gitbook
+# WORKDIR /gitbook
+WORKDIR /srv/gitbook
+VOLUME /srv/gitbook /srv/html
 
 EXPOSE 4000 35729
 
-#CMD  /usr/local/bin/gitbook,serve
-CMD  /usr/local/bin/gitbook,serve,/gitbook
+CMD  /usr/local/bin/gitbook,serve
+#CMD  /usr/local/bin/gitbook,serve,/gitbook
