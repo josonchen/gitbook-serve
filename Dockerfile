@@ -9,7 +9,7 @@ RUN npm install -g gitbook-cli  && \
 	rm -rf /tmp/* /var/lib/{apt,dpkg,cache,log}/*
 
 # RUN  mkdir /gitbook
-# WORKDIR /gitbook
+# Ubuntu had create the dir /srv,create the dir /srv/gitbook on install gitbook
 WORKDIR /srv/gitbook
 VOLUME /srv/gitbook /srv/html
 
